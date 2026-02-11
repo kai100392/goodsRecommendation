@@ -1,0 +1,27 @@
+Step 10: Offline installation (on target machine)
+
+Unzip:
+
+unzip py_graph_libs_py39_offline.zip
+cd offline_wheels
+
+
+Install without internet:
+
+pip install --no-index --find-links=. numpy scipy
+pip install --no-index --find-links=. tensorflow
+pip install --no-index --find-links=. spektral
+pip install --no-index --find-links=. torch torchvision torchaudio
+pip install --no-index --find-links=. torch-geometric
+
+Step 11: Test installation
+import torch
+import torch_geometric
+import spektral
+
+print(torch.__version__)
+print(torch_geometric.__version__)
+print(spektral.__version__)
+
+
+If that works → 🎉 you’re done.
